@@ -31,8 +31,6 @@ def minimum_risk(data):
 
 data = [list(x.strip()) for x in open("input.txt").readlines()]
 data = np.array(data, dtype=np.int32)
-expected = [list(x.strip()) for x in open("expected.txt").readlines()]
-expected = np.array(expected, dtype=np.int32)
 
 data_big = np.concatenate([data + x for x in range(5)], axis=1)
 data_big[data_big > 9] -= 9
